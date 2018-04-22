@@ -5,7 +5,7 @@ class App extends Component {
     constructor(props){
         super(props);
         this.state = {
-            text : 'Server Side Rendering'
+            text : this.props.data.text
         }
     }
 
@@ -18,8 +18,11 @@ class App extends Component {
     }
 
     componentDidMount(){
-
+        this.setState({
+            text : 'loading Complete'
+        })
     }
+
 }
 
 export default App;
